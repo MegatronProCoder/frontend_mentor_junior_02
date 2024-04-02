@@ -1,0 +1,237 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  background-color: #0C122C;
+  color: white;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+} 
+p{
+  margin: 0;
+}
+/* container */
+.container{
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background-img{
+  position: absolute;
+  z-index: -1;
+  /* max-width: 500px; */
+  width: 100%;
+  height: 60%;
+  bottom: 0%;
+}
+/* storage-container */
+.storage-container{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  position: relative;
+  top: -69px;
+  max-width: 800px;
+  width: 100%;
+  margin-inline: 1rem;
+
+}
+.logo-icon-container{
+  grid-column-start: 1;
+  background-color: #1E2C69;
+  padding: 2rem;
+  max-width: 250px;
+  border-radius: 0.5rem;
+  border-top-right-radius: 80px;
+}
+.logo-img{
+  width: 100px;
+  margin-bottom: 1rem;
+}
+.file-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 130px;
+  width: 100%;
+}
+.icon{
+  width: 2rem;
+  height: 2rem;
+  background-color: #0C112E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+.icon img{
+  width: 20px;
+}
+.document-icon img{
+  height: 20px;
+  width: unset;
+}
+.storage-display{
+  grid-column-start: 2;
+  height: 70%;
+  background-color: #1E2C69;
+  margin-top: auto;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+}
+.display-scale{
+  height: 25px;
+  background-color: black;
+  
+  border-radius: 15px;
+  border: 3px solid #0C112E;
+  display: flex;
+  align-items: center;
+  margin-block:0.6rem 0.3rem ;
+}
+.gradient-scale{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  height: 100%;
+  width: 70%;
+  border-radius: 12px;
+  background-image: linear-gradient(90deg, #ffa399 , #ff4d97);
+}
+.circle-display-scale{
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+  margin-right: 0.22rem;
+  box-shadow: 0 0 2px 0 white;  
+  background-color: white;
+
+}
+.space-left-shower{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  color: black;
+  background-color: white;
+  right: -18px;
+  width: 100px;
+  transform: translateX(-50%);
+  padding: 0.7rem 0.6rem;
+  top: 1px;
+  border-radius: 5px 5px 0 5px;
+  
+}
+
+.space-left-shower::before{
+  content: '';
+  position: absolute;
+  border-width: 0px 27px 27px 0px;
+  border-style: solid;
+  border-right-color: white;
+  border-bottom-color:  transparent;
+  top: 52px;
+  left: 73px;
+  
+}
+.space-left-shower span{
+  font-size: 0.46rem;
+  font-weight: 500;
+  margin-right: 0.2rem;
+  color: grey;
+}
+.space-left-shower strong{
+  font-size: 1.6rem;
+  color: #0C112E;
+}
+
+
+.storage{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width:530px) {
+  .container{
+    background-image: url('/images/bg-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .background-img{
+    display: none;
+  }
+  /* storage-container */
+.storage-container{
+  display: unset;
+  position: unset;
+  max-width: 400px;
+  width: 100%;
+  margin-inline: 1rem;
+}
+.logo-icon-container{
+  
+  background-color: #1E2C69;
+  padding: 2rem;
+  max-width: none;
+  width: 100%;
+  border-radius: 0.5rem;
+  border-top-right-radius: 80px;
+  
+}
+.logo-img{
+  width: 140px;
+}
+.file-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 170px;
+  
+}
+.icon{
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+}
+
+.storage-display{
+  height: unset;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  padding-block: 1.3rem 2rem;
+  position: relative;
+}
+
+.space-left-shower{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: black;
+  background-color: white;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50% , -30%);
+  border-radius: 10px; 
+  max-width: 180px;
+  width: 100%;
+  padding: 1rem 1rem;
+}
+.space-left-shower::before{
+  display: none;
+}  
+.space-left-shower span{
+  font-size: 0.7rem;
+  color: grey;
+}
+.space-left-shower strong{
+  font-size: 2.5rem;
+  color: #0C112E;
+  font-weight: 800;
+}
+
+}
